@@ -3,6 +3,7 @@ module.exports = {
   content: ["./src/*.{html,js}"],
   theme: {
     colors: {
+      'sage':'#94b890',
       'blue': '#1fb6ff',
       'purple': '#7e5bef',
       'pink': '#ff49db',
@@ -12,6 +13,8 @@ module.exports = {
       'gray-dark': '#273444',
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
+      'black':'#000000',
+      'white':'#ffffff',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
