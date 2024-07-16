@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/*.{html,js}"],
   theme: {
     colors: {
-      'sage':'#94b890',
+      'red': '#dc2626',
       'blue': '#1fb6ff',
       'purple': '#7e5bef',
       'pink': '#ff49db',
@@ -14,7 +14,11 @@ module.exports = {
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
       'black':'#000000',
-      'white':'#ffffff',
+
+      transparent: 'transparent',
+      current: 'currentColor',
+      'white': '#ffffff',
+
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
@@ -27,6 +31,9 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+      },
+      colors: {
+        'sage':'#94b890',
       }
     },
   plugins: [],
