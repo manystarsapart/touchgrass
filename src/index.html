@@ -8,6 +8,7 @@
 		<!-- <link rel="icon" type="image/png" href="assets/emu.png"/> -->
 	</head>
 	<body class="contain m-10 bg-sage font-sans">
+        
         <div class="flex justify-center">
             <h1 class="text-white font-bold text-4xl float-start pb-5">touchGrass!</h1>
         </div>
@@ -37,10 +38,18 @@
             </div>
         </div>
         
+        <div id="internet-usage-plot"></div>
 
+        <script type="module">
+            import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+            Plot.plot({
+                marks: [
+                    Plot.frame(),
+                    Plot.text(["Hello, world!"], {frameAnchor: "middle"})
+                ]
+            })
 
-
-
+        </script>
 
 	</body>
 	
