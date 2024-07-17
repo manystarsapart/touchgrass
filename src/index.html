@@ -10,13 +10,13 @@
 	<body class="contain m-10 bg-sage font-sans">
         
         <div class="flex justify-center">
-            <h1 class="text-white font-bold text-4xl float-start pb-5">touchGrass!</h1>
+            <h1 class="text-white font-bold text-4xl float-start pb-5">demo</h1>
         </div>
 
         <div class="flex flex-col justify-center border-black border-2 py-5">
             <!-- user info -->
             <div class="flex flex-row flex-wrap flex-1 h-full">
-                <img class="flex-1 w-full" src="./assets/emu.png">
+                <!-- <img class="flex-1 w-full" src="./assets/emu.png"> -->
 
                 <div class="flex-1 w-full">hi</div>
                 <div class="flex-1 w-full">hi</div>
@@ -38,16 +38,21 @@
             </div>
         </div>
         
-        <div id="internet-usage-plot"></div>
+        <div id="internet-usage-plot" class="w-full"></div>
 
         <script type="module">
             import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
-            Plot.plot({
+            const plot = Plot.plot({
                 marks: [
                     Plot.frame(),
-                    Plot.text(["Hello, world!"], {frameAnchor: "middle"})
+                    Plot.text(["internet usage plot"], {frameAnchor: "middle"}),
+                    Plot.barY(internet_usage, {x: "hours", y: "date"}).plot()
+                
+
                 ]
             })
+            const div = document.querySelector("#internet-usage-plot");
+            div.append(plot);
 
         </script>
 
